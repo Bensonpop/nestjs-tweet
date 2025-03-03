@@ -4,7 +4,6 @@ import { CreateTweetDto } from './dto/create-tweet.dto';
 import { UpdateTweetDto } from './dto/update-tweet.dto';
 import { AuthGuard } from 'src/auth/auth.guard';
 import { getUserId } from 'src/decorators/userID';
-import { JwtAdminStartegy } from 'src/auth/startegy/Admin.strategy';
 import { AdminGuard } from 'src/auth/AdminGuard';
 
 @Controller('tweets')

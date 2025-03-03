@@ -7,8 +7,9 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AuthGuard } from './auth.guard'; // Import AuthGuard
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from 'src/users/entities/user.entity';
-import { JwtAdminStartegy } from './startegy/Admin.strategy';
+
 import { Roles } from 'src/role/entity/role.entity';
+import { JwtAdminStartegy } from './startegy/admin.strategy';
 
 @Module({
   imports: [
@@ -26,7 +27,7 @@ import { Roles } from 'src/role/entity/role.entity';
     }),
   ],
   controllers: [AuthController],
-  providers: [AuthService, AuthGuard, JwtAdminStartegy], // Provide AuthGuard
+  providers: [AuthService, AuthGuard,JwtAdminStartegy], // Provide AuthGuard
   exports: [AuthService, AuthGuard, JwtModule, JwtAdminStartegy], // Export AuthGuard and JwtModule
 })
 export class AuthModule {}

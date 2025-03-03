@@ -5,8 +5,8 @@ import { Tweets } from './entities/tweet.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from 'src/users/users.module';
 import { AuthModule } from 'src/auth/auth.module';
-import { JwtAdminStartegy } from 'src/auth/startegy/Admin.strategy';
 import { Roles } from 'src/role/entity/role.entity';
+import { JwtAdminStartegy } from 'src/auth/startegy/admin.strategy';
 
 @Module({
   imports: [UsersModule,TypeOrmModule.forFeature([Tweets]),TypeOrmModule.forFeature([Roles]),AuthModule],
